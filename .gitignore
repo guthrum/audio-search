@@ -1,0 +1,5 @@
+.venv
+videos*
+*.db
+.idea
+.env
