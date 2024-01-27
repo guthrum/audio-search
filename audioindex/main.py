@@ -18,15 +18,17 @@ def transcribe_cmd(file, db):
 
 @click.command('embed')
 @click.option('--db', required=True, type=click.Path(exists=True, dir_okay=False))
-def embed_cmd(db):
-    embeddings_audio.index(db)
+@click.option('--model', default="sentence-transformers/multi-qa-MiniLM-L6-cos-v1")
+def embed_cmd(db, model: str):
+    embeddings_audio.index(db, model_name=model)
 
 
 @click.command('query')
 @click.option('--db', required=True, type=click.Path(exists=True, dir_okay=False))
+@click.option('--model', default="sentence-transformers/multi-qa-MiniLM-L6-cos-v1")
 @click.argument("query")
-def query_cmd(db, query: str):
-    embeddings_query.query(query, db)
+def query_cmd(db, query: str, model: str):
+    embeddings_query.query(query, db, model_name=model)
 
 
 cli.add_command(transcribe_cmd)

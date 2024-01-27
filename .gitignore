@@ -3,3 +3,5 @@ videos*
 *.db
 .idea
 .env
+
+audioindex/__pycache__
