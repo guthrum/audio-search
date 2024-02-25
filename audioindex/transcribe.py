@@ -7,7 +7,7 @@ from typing import List, Tuple
 import assemblyai as aai
 from assemblyai import TranscriptStatus
 
-from audioindex.model import TranscribedParagraph, Orm, Transcript
+from audioindex.store.model import TranscribedParagraph, Orm, Transcript
 
 API_KEY_ENV_VAR = "ASSEMBLY_AI_API_KEY"
 

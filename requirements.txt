@@ -2,3 +2,4 @@ assemblyai==0.20.2
 sentence-transformers==2.2.2
 transformers==4.36.2
 click==8.1.7
+cohere==4.47

@@ -1,7 +1,7 @@
 import os
 import time
 
-debug = os.environ.get('DEBUG', 'false').lower() == 'true'
+debug = os.environ.get('DEBUG', 'true').lower() == 'true'
 
 
 def timing(function):
